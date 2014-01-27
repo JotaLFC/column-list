@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Booking Home Assignment</title>
+    <style type="text/css" media="all">
+        body {
+            background-color: #ffffff;
+            border: 0px;
+            width: 960px;
+            font-family: verdana, arial;
+        }
+
+        header {
+            background-color: #fefeee;
+            width: 100%;
+            height: 80px;
+            font-family: inherit;
+            color: #000000;
+            border-bottom-color: black;
+            font-weight: 700;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            text-decoration: none;
+            padding-bottom: 20px;
+        }
+   
+        li.col_1 {
+            position: relative;
+            top: 5px !important;
+        }
+
+        li.col_2 {
+            position: relative;
+            top: 14px !important;
+        }
+       
+        #content {
+            position: absolute;
+            margin-top: 150px;
+            margin-left: 40px;
+            width: 660px;
+        }
+
+        .amsterdam {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .barcelona {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .beijing {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .berlin {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .lisbon {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .madrid {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .moscow {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .paris {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .singapore {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .zagreb {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        span {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .count {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+         
+    </style>
+    <script type="text/javaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script type="text/javaScript">
+        $(document).ready(function () {
+            
+
+                var cities = {
+                    moscow: { name: "Moscow", count: 12, content: "<p> Moscow is the capital city and the most populous federal subject of <b> Russia </b>. The city is a major political, economic, cultural and scientific center in Russia and in Eurasia. </p>" },
+                    amsterdam: { name: "Amsterdam", count: 25, content: "<p>Amsterdam is the capital and most populous city of the <b>Netherlands</b>. Its status as the Dutch capital is mandated by the Constitution of the Netherlands though it is not the seat of the Dutch government, which is at the Hague. </p>" },
+                    lisbon: { name: "Lisbon", count: 15, content: "<p>Lisbon is the largest city and capital of <b>Portugal</b> with a population of 547,631 within its administrative limits on a land area of 84.8 square kilometers.</p>" },
+                    berlin: { name: "Berlin", count: 19, content: "<p>Berlin is the capital city of <b>Germany</b> and one of the 16 states of Germany. With a population of 3.3 million people, Berlin is Germany's largest city and is the second most populous city proper and the seventh most populous urban area in the European Union.</p>" },
+                    madrid: { name: "Madrid", count: 25, content: "<p>Madrid is the capital of <b>Spain</b> and its largest city. The population of the city is roughly 3.3 million and the entire population of the Madrid metropolitan area is calculated to be around 6.5 million.</p>" },
+                    barcelona: { name: "Barcelona", count: 10, content: "<p>Barcelona is a Spanish city, capital of the autonomous community of Catalonia and the second largest city in the country, with a population of 1,620,943 within its administrative limits.</p>" },
+                    zagreb: { name: "Zagreb", count: 27, content: "<p>Zagreb is the capital and the largest city of the Republic of <b>Croatia</b>. It is located in the northwest of the country, along the Sava river, at the southern slopes of the Medvednica mountain.</p>" },
+                    singapore: { name: "Singapore", count: 30, content: "<p>Singapore, officially the Republic of Singapore, is a Southeast Asian sovereign city-state off the southern tip of the Malay Peninsula, 137 kilometers north of the equator.</p>" },
+                    beijing: { name: "Beijing", count: 14, content: "<p>Beijing, sometimes romanized as Peking, is the capital of the People's Republic of China and one of the most populous cities in the world. The population as of 2012 was 20,693,000.</p>" },
+                    paris: { name: "Paris", count: 5, content: "<p>Paris is the capital and most populous city of <b>France</b>. It is situated on the River Seine, in the north of the country, at the heart of the Île-de-France region.</p>" }
+                };
+
+                // Show counts
+                $("#cities").find(".amsCount").show(function () {
+                    var amsCount = cities.amsterdam.count;
+                    $('#cities').find('.amsCount').html(amsCount);
+                    return false;
+                });
+
+                $("#cities").find(".barCount").show(function () {
+                    var barCount = cities.barcelona.count;
+                    $('#cities').find('.barCount').html(barCount);
+                    return false;
+                });
+
+                $("#cities").find(".beiCount").show(function () {
+                    var beiCount = cities.beijing.count;
+                    $('#cities').find('.beiCount').html(beiCount);
+                    return false;
+                });
+
+                $("#cities").find(".berCount").show(function () {
+                    var berCount = cities.berlin.count;
+                    $('#cities').find('.berCount').html(berCount);
+                    return false;
+                });
+
+                $("#cities").find(".lisCount").show(function () {
+                    var lisCount = cities.lisbon.count;
+                    $('#cities').find('.lisCount').html(lisCount);
+                    return false;
+                });
+
+                $("#cities").find(".madCount").show(function () {
+                    var madCount = cities.madrid.count;
+                    $('#cities').find('.madCount').html(madCount);
+                    return false;
+                });
+
+                $("#cities").find(".mosCount").show(function () {
+                    var mosCount = cities.moscow.count;
+                    $('#cities').find('.mosCount').html(mosCount);
+                    return false;
+                });
+
+                $("#cities").find(".parCount").show(function () {
+                    var parCount = cities.paris.count;
+                    $('#cities').find('.parCount').html(parCount);
+                    return false;
+                });
+
+                $("#cities").find(".sinCount").show(function () {
+                    var sinCount = cities.singapore.count;
+                    $('#cities').find('.sinCount').html(sinCount);
+                    return false;
+                });
+
+                $("#cities").find(".zagCount").show(function () {
+                    var zagCount = cities.zagreb.count;
+                    $('#cities').find('.zagCount').html(zagCount);
+                    return false;
+                });
+                // Show cities content
+                $("#cities").find(".amsterdam").click(function () {
+                    var amsCont = cities.amsterdam.content;
+                    $('#content').html(amsCont);
+                    return false;
+                });
+
+                $("#cities").find(".barcelona").click(function () {
+                    var barCont = cities.barcelona.content;
+                    $('#content').html(barCont);
+                    return false;
+                });
+
+                $("#cities").find(".beijing").click(function () {
+                    var beiCont = cities.beijing.content;
+                    $('#content').html(beiCont);
+                    return false;
+                });
+
+                $("#cities").find(".berlin").click(function () {
+                    var berCont = cities.berlin.content;
+                    $('#content').html(berCont);
+                    return false;
+                });
+
+                $("#cities").find(".lisbon").click(function () {
+                    var lisCont = cities.lisbon.content;
+                    $('#content').html(lisCont);
+                    return false;
+                });
+
+                $("#cities").find(".madrid").click(function () {
+                    var madCont = cities.madrid.content;
+                    $('#content').html(madCont);
+                    return false;
+                });
+
+                $("#cities").find(".moscow").click(function () {
+                    var mosCont = cities.moscow.content;
+                    $('#content').html(mosCont);
+                    return false;
+                });
+
+                $("#cities").find(".paris").click(function () {
+                    var parCont = cities.paris.content;
+                    $('#content').html(parCont);
+                    return false;
+                });
+
+                $("#cities").find(".singapore").click(function () {
+                    var sinCont = cities.singapore.content;
+                    $('#content').html(sinCont);
+                    return false;
+                });
+
+                $("#cities").find(".zagreb").click(function () {
+                    var zagCont = cities.zagreb.content;
+                    $('#content').html(zagCont);
+                    return false;
+                });
+
+                function sortUL(selector) {
+                    $(selector).children("li").sort(function (a, b) {
+                        var upA = $(a).text().toUpperCase();
+                        var upB = $(b).text().toUpperCase();
+                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
+                    }).appendTo(selector);
+                }
+
+                sortUL("ul#cities");
+
+               
+                var col_max_height = 4; //Max Items per column
+                var col_width = 270; //Pixels
+                var prevCol = 0;
+                $('ul').each(function () {
+                    $(this).find('li').each(function (index) {
+                        column = parseInt(index / col_max_height, 0);
+                        $(this).css('margin-left', column * col_width + 'px');
+                        if (prevCol != column) {
+                            $(this).css('margin-top', '-165px').addClass('col_' + column);
+                            prevCol = column;
+                        } else {
+                            $(this).css('margin-top', '0px').addClass('col_' + column);
+                        }
+                    });
+                });
+
+        });
+      </script>
+    </head>
+<body>
+    <header>Popular Destinations</header>   
+    <ul id="cities">       
+        <li><span class="barcelona">Barcelona</span><span> (<span class="barCount"></span>)</span></li>
+        <li><span class="beijing">Beijing</span><span> (<span class="beiCount"></span>)</span></li>
+        <li><span class="berlin">Berlin</span><span> (<span class="berCount"></span>)</span></li>
+        <li><span class="lisbon">Lisbon</span><span> (<span class="lisCount"></span>)</span></li>
+        <li><span class="madrid">Madrid</span><span> (<span class="madCount"></span>)</span></li>
+        <li><span class="moscow">Moscow</span><span> (<span class="mosCount"></span>)</span></li>
+        <li><span class="paris">Paris</span><span> (<span class="parCount"></span>)</span></li>
+        <li><span class="singapore">Singapore</span><span> (<span class="sinCount"></span>)</span></li>
+        <li><span class="zagreb">Zagreb</span><span> (<span class="zagCount"></span>)</span></li> 
+        <li><span class="amsterdam">Amsterdam</span><span> (<span class="amsCount"></span>)</span></li> <!--for showing ascending sort-->
+    </ul>
+
+    <div id="content">Content is displayed here:</ br></ br></div>
+
+</body>
+</html>
